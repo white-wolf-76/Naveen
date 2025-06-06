@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: rgb(37, 99, 235);
+  --secondary-color: rgb(17, 24, 39);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Progress bars animation delay for staggered effect */
+.skills__data:nth-child(1) .skills__bar {
+  transition-delay: 0.1s;
+}
+.skills__data:nth-child(2) .skills__bar {
+  transition-delay: 0.2s;
+}
+.skills__data:nth-child(3) .skills__bar {
+  transition-delay: 0.3s;
+}
+.skills__data:nth-child(4) .skills__bar {
+  transition-delay: 0.4s;
+}
+.skills__data:nth-child(5) .skills__bar {
+  transition-delay: 0.5s;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
